@@ -4,9 +4,10 @@ import Coin from "../Coin/Coin";
 
 const MainCrypto = () => {
   const [listOfCoins, setListOfCoins] = useState([]);
+  const [ searchWord, setSearchWord] = useState("")
   useEffect(() => {
     fetch(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=10&page=1"
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=pkr"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -18,8 +19,13 @@ const MainCrypto = () => {
       });
   }, []);
 
+  const searchFilter = listOfCoins.filter((coin) => {
+    return coin.name.includes(searchWord);
+  })
+
   return (
     <div className="cryptoDisplay">
+        <input type="text" placeholder="search" onChange={(event) => {setSearchWord(event.target.value)}}/>
       <div className="display heading">
         <ul>
           <li style={{ width: "10rem" }}>NAME</li>
@@ -28,7 +34,7 @@ const MainCrypto = () => {
           <li>Icon</li>
         </ul>
       </div>
-      {listOfCoins.map((coin) => {
+      {searchFilter.map((coin) => {
         return (
           <Coin
             name={coin.name}
