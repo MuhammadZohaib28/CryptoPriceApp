@@ -26,3 +26,16 @@ ul{
     list-style: none;
     gap: 13rem;
 }
+
+input{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    border-radius: 0.4rem;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+        
+}
