@@ -1,0 +1,21 @@
+header{
+    /* border: 1px solid red; */
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #cc208e 0%, #6713d2 100%);
+    
+}
+
+h1{
+    cursor: pointer;
+    font-family: sans-serif;
+    color: #e9e3f1;
+    font-size: 2rem;
+
+}
+h1:hover{
+    color: #d67cb5;
+    cursor: pointer;
+}

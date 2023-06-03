@@ -1,0 +1,28 @@
+.display{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    background-color: rgb(243, 239, 239);
+    width: 75%;
+
+
+}
+
+img{
+    height: 4.5rem;
+}
+
+.c{
+    text-align: right;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    gap: 13rem;
+}
